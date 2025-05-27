@@ -1,3 +1,54 @@
+@use "warm_theme" as *;
+//@use "cold_theme" as *;
+
+p {margin: 0;}
+
 body {
-  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'comic sans ms', sans-serif;
+  box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  & div {
+    width: 100px;
+    height: 85px;
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: $radius;
+  }
+
+  & .base {background-color: $base-color}
+  & .important {background-color: $important-color}
+  & .warning {background-color: $warning-color}
+
+  & .fonts {
+    width: auto;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & .fonts p:first-child{
+    font-family: $primary-font;
+    margin-bottom: 10px;
+  }
+  & .fonts p:last-child {
+    font-family: $secondary-font;
+  }
+
+  & .box-shadow {
+    box-shadow: $shadow;
+  }
+}
+
