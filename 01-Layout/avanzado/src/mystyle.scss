@@ -1,0 +1,60 @@
+$bg-color: #141414;
+$font-family: "Jost", sans-serif;
+$font-color: rgb(244, 244, 244);
+
+body {
+    background-color: $bg-color;
+    font-family: $font-family;
+    color: $font-color;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    background-color: $bg-color;
+}
+
+.header-logo {
+    img {
+        width: 100px;
+    }
+
+    .header-logo-title {
+        display: none;
+    }
+}
+
+.header-nav {
+    .header-nav-list {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+
+        .header-nav-list-element {
+            a {
+                display: block;
+                text-decoration: none;
+                color: $font-color;
+                padding: 15px 10px;
+                border-radius: 5px;
+                transition: .3s ease-in-out;
+            }
+
+            :hover {
+                background-color: $font-color;
+                color: $bg-color;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+}
